@@ -29,14 +29,16 @@
           >
 
           <ul class="site-nav list">
-            <li class="item"><a href="" class="link current">Студія</a></li>
             <li class="item">
-              <a href="./portfolio.html" class="link site-nav-item"
+              <a href="" class="link current current-link nav-link">Студія</a>
+            </li>
+            <li class="item">
+              <a href="./portfolio.html" class="link site-nav-item nav-link"
                 >Портфоліо</a
               >
             </li>
             <li class="item">
-              <a href="" class="link site-nav-item">Контакти</a>
+              <a href="" class="link site-nav-item nav-link">Контакти</a>
             </li>
           </ul>
 
@@ -64,7 +66,9 @@
     <main>
       <section class="banner overlay">
         <h1 class="banner-title">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="button-order">Замовити послугу</button>
+        <button type="button" class="button-order" data-modal-open>
+          Замовити послугу
+        </button>
       </section>
       <section class="features">
         <div class="container features-list">
@@ -126,6 +130,9 @@
           <ul class="list work-list">
             <li class="item">
               <img src="./images/img.jpg" alt="руки на ноутбуці" width="370" />
+              <div class="overlay-work">
+                <p class="overlay-text">Десктопні додатки</p>
+              </div>
             </li>
             <li class="item">
               <img
@@ -133,9 +140,15 @@
                 alt="телефон в руках"
                 width="370"
               />
+              <div class="overlay-work">
+                <p class="overlay-text">Мобільні додатки</p>
+              </div>
             </li>
             <li class="item">
               <img src="./images/img(2).jpg" alt="таблет в руках" width="370" />
+              <div class="overlay-work">
+                <p class="overlay-text">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -422,5 +435,18 @@
         </section>
       </div>
     </footer>
+
+    <!-- Модальное окно -->
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal modal-animation" data-modal-window>
+        <button class="modal-btn" data-modal-close>
+          <svg class="modal-icon" width="18px" height="18px">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
